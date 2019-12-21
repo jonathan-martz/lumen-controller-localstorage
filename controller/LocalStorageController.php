@@ -26,9 +26,9 @@ class LocalStorageController extends Controller
 
         ]);
 
-        $cookies = DB::table('local-storage')->get();
+        $cookies = DB::table('localstorage')->get();
 
-        $this->addResult('local-storage',$cookies);
+        $this->addResult('localstorage',$cookies);
         $this->addMessage('success', 'Local Storage loaded.');
 
         return $this->getResponse();

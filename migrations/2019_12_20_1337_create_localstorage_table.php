@@ -13,7 +13,7 @@ class CreateLocalstorageTable extends Migration
      */
     public function up()
     {
-        Schema::create('local-storage', function (Blueprint $table) {
+        Schema::create('localstorage', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('description');
@@ -27,6 +27,6 @@ class CreateLocalstorageTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('local-storage');
+        Schema::dropIfExists('localstorage');
     }
 }

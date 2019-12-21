@@ -1,4 +1,4 @@
 <?php
 use Illuminate\Support\Facades\Route;
 
-Route::get('/local-storage', 'App\Http\Controllers\LocalStorageController@select');
+Route::get('/localstorage', 'App\Http\Controllers\LocalStorageController@select');
