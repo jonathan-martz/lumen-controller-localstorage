@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use \http\Env\Response;
+use http\Env\Response;
 use Illuminate\Http\JsonResponse;
-use \Illuminate\Http\Request;
-use \Illuminate\Support\Facades\DB;
-use \Illuminate\Support\Facades\Hash;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
 
 /**
@@ -28,7 +28,7 @@ class LocalStorageController extends Controller
 
         $cookies = DB::table('localstorage')->get();
 
-        $this->addResult('localstorage',$cookies);
+        $this->addResult('localstorage', $cookies);
         $this->addMessage('success', 'Local Storage loaded.');
 
         return $this->getResponse();
