@@ -22,13 +22,11 @@ class LocalStorageController extends Controller
      */
     public function select(Request $request)
     {
-        $validation = $this->validate($request, [
-
-        ]);
+        $validation = $this->validate($request, []);
 
         $cookies = DB::table('localstorage')->get();
 
-        $this->addResult('localstorage', $cookies);
+        $this->addData('localstorage', $cookies);
         $this->addMessage('success', 'Local Storage loaded.');
 
         return $this->getResponse();
